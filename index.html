@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Gemoji Search</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/emojione/2.2.7/assets/css/emojione.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="field depth">
+      <input type="text" id="searchbox" />
+    </div>
+  </header>
+  <div id="gemoji-list" class="gemoji-list">
+  </div>
+  <script id="gemoji-template" type="text/html">
+    <div class="gemoji-item depth">
+      <div class="symbol">
+        <%= symbol %>
+      </div>
+      <% for(var i = 0; i<names.length; i++) { %>
+      <div class="name" title="Click to copy !">
+        <%= names[i] %>
+      </div>
+      <% } %>
+    </div>
+  </script>
+  <script src='https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://cdn.rawgit.com/jiren/filter.js/ad6cebd3/dist/filter.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/emojione/2.2.7/lib/js/emojione.min.js'></script>
+  <script src='js/index.js'></script>
+</body>
+</html>
