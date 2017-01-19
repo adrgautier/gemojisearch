@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  emojione.imageType = 'svg';
+
   $.getJSON("https://rawgit.com/wooorm/gemoji/master/index.json",function(data){
    
     var values = [];
@@ -9,7 +11,7 @@ $(document).ready(function(){
       var category = tmp.category,
         tags = tmp.tags,
         names = [];
-      
+        
       tmp.names.forEach(function(name){
         names.push(':'+name+':');
       })
