@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
   emojione.imageType = 'svg';
+  toastr.options.preventDuplicates = true;
 
   $.getJSON("https://rawgit.com/wooorm/gemoji/master/index.json",function(data){
    
@@ -32,7 +33,9 @@ $(document).ready(function(){
 
     new Clipboard('.name', {
         text: function(trigger) {
-            return $.trim($(trigger).text());
+            var code = $.trim($(trigger).text());
+            toastr.success(code+" copied !");
+            return code;
         }
     });
   });

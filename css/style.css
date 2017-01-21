@@ -97,3 +97,26 @@ header{
     font-weight: 700;
     cursor: pointer;
 }
+
+#toast-container .toast{
+    opacity: 1;
+    border-radius: 0;
+        box-shadow:
+   1px 1px 0 #00C853,
+   2px 2px 0 #00C853,
+   3px 3px 0 #00C853,
+   4px 4px 0 #00C853,
+   5px 5px 0 #00C853,
+   6px 6px 0 #00C853,
+   7px 7px 0 #00C853!important;
+   margin: 20px;
+}
+
+#toast-container .toast-success{
+    background-color: #00E676;
+}
+
+#toast-container .toast-message{
+    color: white;
+    font-weight: bold;
+}
